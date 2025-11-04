@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그린시드 재단 | GreenSeed Foundation</title>
+  <style>
+    /* --- 기본 설정 --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #333;
+      background-color: #fdfdfd;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem;
+      text-align: center;
+      transition: background 0.6s ease;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      max-width: 700px;
+      line-height: 1.8;
+      margin: 0 auto 1rem auto;
+      font-size: 1.1rem;
+    }
+
+    /* --- 네비게이션 바 --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2e8b57;
+    }
+
+    /* --- 섹션별 스타일 --- */
+    #intro {
+      background: linear-gradient(to bottom right, #d6f5d6, #f2fff2);
+    }
+
+    #activity {
+      background: linear-gradient(to bottom right, #f5fff8, #c7f7e5);
+    }
+
+    #campaign {
+      background: linear-gradient(to bottom right, #e6faff, #c8e9ff);
+    }
+
+    #news {
+      background: linear-gradient(to bottom right, #fff6e6, #ffeacc);
+    }
+
+    #support {
+      background: linear-gradient(to bottom right, #f5f5f5, #eaeaea);
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #2e8b57;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #256b45;
+    }
+
+    /* --- 푸터 --- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #222;
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+
+    /* --- 페이드인 애니메이션 --- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="#intro">소개</a>
+    <a href="#activity">핵심활동</a>
+    <a href="#campaign">캠페인참여</a>
+    <a href="#news">뉴스 / 스토리</a>
+    <a href="#support">후원 / 문의</a>
+  </nav>
+
+  <!-- 섹션 1: 소개 -->
+  <section id="intro" class="fade-in">
+    <h1>🌱 그린시드 재단</h1>
+    <p>그린시드는 청소년이 주도하는 생태∙환경 비영리 재단입니다.  
+    우리가 사는 지역에서부터 지구의 지속 가능성을 실천하는 작은 씨앗이 되고자 합니다.</p>
+    <p><em>“작은 손이 만드는 큰 지구 변화”</em></p>
+  </section>
+
+  <!-- 섹션 2: 핵심활동 -->
+  <section id="activity" class="fade-in">
+    <h2>핵심 활동</h2>
+    <p>도시 속 작은 녹지를 되살리는 <strong>도시 생태 복원 프로젝트</strong>를 중심으로 활동합니다.  
+    학교 주변의 하천, 숲, 공원을 직접 가꾸며 지역 생태계를 복원하고 시민 참여를 확대합니다.</p>
+  </section>
+
+  <!-- 섹션 3: 캠페인참여 -->
+  <section id="campaign" class="fade-in">
+    <h2>캠페인 참여</h2>
+    <p>우리는 매달 ‘제로웨이스트 챌린지’를 진행합니다.  
+    일상 속 플라스틱 줄이기, 업사이클링 아이디어 공유 등 SNS 해시태그 #GreenSeedChallenge 로 참여해보세요!</p>
+    <button onclick="alert('참여해주셔서 감사합니다! 🌿')">참여하기</button>
+  </section>
+
+  <!-- 섹션 4: 뉴스 / 스토리 -->
+  <section id="news" class="fade-in">
+    <h2>뉴스 / 스토리</h2>
+    <p>📅 2025.10 — 학교 생태 정원 복원 프로젝트 시작<br>
+       📅 2025.09 — 통영 시민과 함께하는 해양 쓰레기 수거 행사<br>
+       📅 2025.08 — ‘지속가능한 미래를 위한 청소년 포럼’ 발표 진행</p>
+  </section>
+
+  <!-- 섹션 5: 후원 / 문의 -->
+  <section id="support" class="fade-in">
+    <h2>후원 및 문의</h2>
+    <p>우리의 활동은 모두의 관심과 참여로 성장합니다.<br>
+    후원이나 협업 문의는 아래 이메일로 연락해주세요.<br><br>
+    📧 <a href="mailto:greenseed@school.kr">greenseed@school.kr</a></p>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    © 2025 충렬여고 1학년 1반 | 본 웹사이트의 지적 소유권은 충렬여고 1학년 1반에게 있습니다.
+  </footer>
+
+  <script>
+    // 스크롤 시 섹션 페이드인
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
